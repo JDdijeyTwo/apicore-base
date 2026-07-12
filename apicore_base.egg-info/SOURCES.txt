@@ -1,0 +1,10 @@
+README.md
+setup.py
+apicore/__init__.py
+apicore/base.py
+apicore/neti.py
+apicore_base.egg-info/PKG-INFO
+apicore_base.egg-info/SOURCES.txt
+apicore_base.egg-info/dependency_links.txt
+apicore_base.egg-info/requires.txt
+apicore_base.egg-info/top_level.txt

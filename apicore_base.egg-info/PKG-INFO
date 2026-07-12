@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: apicore-base
+Version: 0.0.1
+Summary: APICore BASE - Все продукты APICore!
+Home-page: https://github.com/JDdijeyTwo/apicore-base
+Author: JDdijey
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+APICore BASE - Все базовые продукты от студии APICore в одном Python пакете!
+
+Пакет включает в себя продукты:
+- NetI SDK - SDK Для зарегестрированных Нейросетевых моделей на портале APICore Technology
+
+Пример использования:
+from apicore.base import NetiSDK
+neti = NetiSDK()
+token = "key"
+client = neti.client(
+    model="NetI.FS-0.1",
+    key=token
+)
+response = client.response(
+    messages=[
+        {
+            "role": "user",
+            "content": "Hello!"
+        }
+    ]
+)
+print(response.return_answer)
+
+Также в client можно дописать пользовстельский эендпоинт чтобы выбранные модели брались оттуда
+Чтобы получить API ключ от всех серий NetI, надо зайти на https://JDdijeyTwo.github.io/apicore-portal
+И заполнить форму.
